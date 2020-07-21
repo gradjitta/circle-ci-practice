@@ -42,4 +42,4 @@ workflows:
       - print_name
       - save_hello_world_output
       - print_output_file
-      - print_world:
+      - print_world
