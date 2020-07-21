@@ -12,16 +12,16 @@ jobs:
     steps:
       - run: echo "text to output here" > output.txt
       - persist_to_workspace:
-          root: /home/circleci
+          root: ~/
           paths:
             - output.txt
   print_output_file:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run: cat output.txt
+      - run: cat ~/output.txt
       - attach_workspace:
-          at: /home/circleci
+          at: ~/
   print_world:
     docker:
       - image: circleci/node:13.8.0
