@@ -12,7 +12,7 @@ jobs:
     steps:
       - run: echo "text to output here" > output.txt
       - persist_to_workspace:
-          root: ~/
+          root: /home/circleci
           paths:
             - output.txt
   print_output_file:
@@ -21,7 +21,7 @@ jobs:
     steps:
       - run: cat output.txt
       - attach_workspace:
-          at: ~/
+          at: /home/circleci
 
   print_world:
     docker:
