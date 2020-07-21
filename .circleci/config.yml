@@ -22,7 +22,6 @@ jobs:
       - run: cat output.txt
       - attach_workspace:
           at: /home/circleci
-/home/circleci
   print_world:
     docker:
       - image: circleci/node:13.8.0
